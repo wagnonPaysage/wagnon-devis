@@ -1,0 +1,9 @@
+{
+  "name": "Wagnon Paysage",
+  "short_name": "Wagnon",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2E7D32",
+  "icons": []
+}
