@@ -4,7 +4,7 @@
   "description": "Logiciel de devis Wagnon Paysage",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "node serveurs.js"
   },
   "keywords": [],
   "author": "",
