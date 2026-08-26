@@ -121,5 +121,25 @@ td{
 
 </div>
 
+<button id="installBtn" style="position:fixed;bottom:20px;right:20px;padding:12px 18px;border:none;border-radius:10px;background:#2e7d32;color:white;font-weight:bold;cursor:pointer;display:none;">
+  📲 Installer l'application
+</button>
+
+<script>
+let deferredPrompt;
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById("installBtn").style.display = "block";
+});
+
+document.getElementById("installBtn").addEventListener("click", async () => {
+  deferredPrompt.prompt();
+  await deferredPrompt.userChoice;
+  document.getElementById("installBtn").style.display = "none";
+});
+</script>
+
 </body>
 </html>
