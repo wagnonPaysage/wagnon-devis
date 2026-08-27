@@ -1,10 +1,14 @@
 const fs = require("fs");
 const XLSX = require("xlsx");
 const { PDFDocument, StandardFonts } = require("pdf-lib");
+const { execSync } = require("child_process");
 
 (async () => {
+execSync('curl -L "https://docs.google.com/spreadsheets/d/1jIl_PFQ8lTDFZ_UtwjniMbLM8T9-W4Id/export?format=xlsx" -o temp.xlsx');
+const fichierExcel = "temp.xlsx";
+
   // ===== Lecture Excel =====
-  const fichierExcel = fs.readdirSync(".").find(f => f.endsWith(".xlsx"));
+const fichierExcel = "temp.xlsx";
 const workbook = XLSX.readFile(fichierExcel);
   const sheet = workbook.Sheets["Devis terrain"];
 
