@@ -4,7 +4,7 @@ const { PDFDocument, StandardFonts } = require("pdf-lib");
 const { execSync } = require("child_process");
 
 (async () => {
-execSync('curl -L "https://docs.google.com/spreadsheets/d/1jIl_PFQ8lTDFZ_UtwjniMbLM8T9-W4Id/export?format=xlsx" -o temp.xlsx');
+execSync('curl -L "https://1drv.ms/x/c/07fe24fc5afd3513/IQAoLcaFsNtmT6ygSSals-swAVv1L0IM3MobOt1kF8To42E?download=1" -o temp.xlsx');
 const fichierExcel = "temp.xlsx";
 
   // ===== Lecture Excel =====
