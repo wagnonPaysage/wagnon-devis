@@ -4,11 +4,9 @@ const { PDFDocument, StandardFonts } = require("pdf-lib");
 const { execSync } = require("child_process");
 
 (async () => {
-execSync('curl -L "https://1drv.ms/x/c/07fe24fc5afd3513/IQAoLcaFsNtmT6ygSSals-swAVv1L0IM3MobOt1kF8To42E?download=1" -o temp.xlsx');
-const fichierExcel = "temp.xlsx";
+const fichierExcel = "Wagnon_Paysage_Outil_Patron_V9.xlsx";
 
   // ===== Lecture Excel =====
-const fichierExcel = "temp.xlsx";
 const workbook = XLSX.readFile(fichierExcel);
   const sheet = workbook.Sheets["Devis terrain"];
 
