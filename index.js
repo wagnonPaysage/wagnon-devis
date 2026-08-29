@@ -8,15 +8,18 @@ const fichierExcel = "Wagnon_Paysage_Outil_Patron_V9.xlsx";
 
   // ===== Lecture Excel =====
 const workbook = XLSX.readFile(fichierExcel);
-  const sheet = workbook.Sheets["Devis terrain"];
+const sheet = workbook.Sheets["Mode Chantier V9"];
 
-const client = "Nom Prénom";
-const prestation = sheet["B2"]?.v || "Taille de haie";
-const ml = Number(sheet["B3"]?.v || 20);
-const hauteur = Number(sheet["B4"]?.v || 1.8);
-const faces = Number(sheet["B5"]?.v || 2);
-const adresse = "Adresse du client";
-const telephone = "06 00 00 00 00";
+const client = sheet["B3"]?.v || "";
+const adresse = sheet["B4"]?.v || "";
+const telephone = sheet["B5"]?.v || "";
+const distance = Number(sheet["B6"]?.v || 0);
+const ml = Number(sheet["B7"]?.v || 0);
+const hauteur = Number(sheet["B8"]?.v || 0);
+const evacuation = sheet["B9"]?.v || "";
+const nettoyage = sheet["B10"]?.v || "";
+const prestation = "Taille de haie";
+const faces = 3;
 
 const prixUnitaire = 12;
 
