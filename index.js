@@ -207,7 +207,7 @@ const totalTTC = totalHT + tva;
 
   page.drawText(`TOTAL TTC : ${totalTTC} €`, {
     x: 285,
-    y,
+    y, 40,
     size: 20,
     font: fontBold,
   });
@@ -221,7 +221,7 @@ const totalTTC = totalHT + tva;
 
   page.drawText("Conditions : paiement à réception du devis signé.", {
     x: 40,
-    y: 40,
+    y: 25,
     size: 9,
     font,
   });
