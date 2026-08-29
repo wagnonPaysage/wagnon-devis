@@ -140,6 +140,9 @@ const totalTTC = totalHT + tva;
   ligne("Prestation", prestation);
   ligne("Mètres linéaires", ml + " m");
   ligne("Hauteur", hauteur + " m");
+  ligne("Distance aller", distance + " km");
+  ligne("Évacuation des déchets", evacuation);
+  ligne("Nettoyage fin de chantier", nettoyage);
   ligne("Faces à tailler", faces);
 
   // ===== Tableau =====
