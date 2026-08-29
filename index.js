@@ -1,12 +1,10 @@
 const fs = require("fs");
 const XLSX = require("xlsx");
 const { PDFDocument, StandardFonts } = require("pdf-lib");
-const { execSync } = require("child_process");
 
 (async () => {
-  execSync('curl -L "https://1drv.ms/x/c/07fe24fc5afd3513/IQAoLcaFsNtmT6ygSSals-swAeMtIm8xj3UrN8JzGrKdTjU?download=1" -o temp.xlsx');
 
-  const fichierExcel = "temp.xlsx";
+  const fichierExcel = "Wagnon_Paysage_Outil_Patron_V9.xlsx";
 
   // ===== Lecture Excel =====
 const workbook = XLSX.readFile(fichierExcel);
