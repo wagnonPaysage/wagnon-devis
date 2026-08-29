@@ -131,7 +131,7 @@ const totalTTC = totalHT + tva;
       font,
     });
 
-    y -= 28;
+    y -= 34;
   }
 
   ligne("Client", client);
@@ -221,14 +221,14 @@ const totalTTC = totalHT + tva;
 
   page.drawText("Conditions : paiement à réception du devis signé.", {
     x: 40,
-    y: 72,
+    y: 40,
     size: 9,
     font,
   });
 
   page.drawText("Signature client :", {
     x: 360,
-    y: 72,
+    y: 40,
     size: 9,
     font,
   });
