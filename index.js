@@ -207,7 +207,7 @@ const totalTTC = totalHT + tva;
 
   page.drawText(`TOTAL TTC : ${totalTTC} €`, {
     x: 285,
-    y, 40,
+    y:  40,
     size: 20,
     font: fontBold,
   });
