@@ -13,8 +13,15 @@ if (req.url === "/pdf/devis.pdf") {
   return res.end(fs.readFileSync("pdf/devis.pdf"));
   }
 if (req.url === "/generer") {
-  exec("node index.js", () => {
-    res.writeHead(302, { Location: "/pdf/devis.pdf" });
+  exec("node index.js", (err) => {
+    if (err) {
+      res.writeHead(500);
+      return res.end("Erreur génération");
+    }
+
+    res.writeHead(302, {
+      "Location": "/pdf/devis.pdf?v=" + Date.now()
+    });
     res.end();
   });
   return;
